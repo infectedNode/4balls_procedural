@@ -32,15 +32,18 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void draw() {
-
-        ellipse(speed1, height1, Diameter, Diameter);
-        ellipse(speed2, height2, Diameter, Diameter);
-        ellipse(speed3, height3, Diameter, Diameter);
-        ellipse(speed4, height4, Diameter, Diameter);
+        drawCircle(speed1, height1);
+        drawCircle(speed2, height2);
+        drawCircle(speed3, height3);
+        drawCircle(speed4, height4);
 
         speed1 += 1;
         speed2 += 2;
         speed3 += 3;
         speed4 += 4;
+    }
+
+    private void drawCircle(int speed, int height) {
+        ellipse(speed, height, Diameter, Diameter);
     }
 }
